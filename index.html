@@ -1,7 +1,10 @@
+<!-- Alumno: Patricio Quintanilla
+Asignatura: PGY3121
+Fecha Creación: 14/05/2023 -->
 <!doctype html>
 <html lang="en">
 
-<head>
+<head class="imagendefondo">
   <title>PGY3121-Final-Fantasy-API-Prueba</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -10,18 +13,238 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/API.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
   <header>
     <!-- place navbar here -->
+    <div class="barra-principal py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <p class="text-light"><b>PGY3121-Final-Fantasy-API-Prueba - Patricio Quintanilla</b></p>
+                    <a href="#"><img class="w-100" src="https://finalfantasyxv.square-enix-games.com/public/img/navigation/logo-final-fantasy-nav.png" alt=""></a>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
   </header>
   <main>
+    <div class="paginacion py-4">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Seleccionar página
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>hola</li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="descripciones-personajes py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="card mx-2" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2 my-4" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2 my-4" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2 my-4" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+                  <div class="card mx-2 my-4" style="width: 18rem;">
+                    <img src="${imagenes}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${character.name}</h5>
+                      <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+                    </ul>
+                    <div class="card-body text-center">
+                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+                    </div>
+                  </div>
+                  <!-- fin card -->
+
+            </div>
+        </div>
+    </div>
+
 
   </main>
   <footer>
+    <hr>
     <!-- place footer here -->
+    <div class="container text-light py-4">
+        <div class="row text-center">
+            <b>PGY3121-Final-Fantasy-API-Prueba - Patricio Quintanilla
+
+            </b>
+        </div>
+    </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

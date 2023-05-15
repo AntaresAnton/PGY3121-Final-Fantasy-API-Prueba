@@ -1,0 +1,10 @@
+/* Alumno: Patricio Quintanilla
+Asignatura: PGY3121
+Fecha Creación: 14/05/2023 */
+
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+}
