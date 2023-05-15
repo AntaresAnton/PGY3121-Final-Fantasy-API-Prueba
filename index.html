@@ -43,14 +43,21 @@ Fecha Creación: 14/05/2023 -->
             <div class="row justify-content-between">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
-                    <div class="btn-group">
-                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Seleccionar página
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>hola</li>
-                        </ul>
-                      </div>
+                  <p class="text-light">SELECCIONE PÁGINA</p>
+                  <select class="btn btn-primary w-100" value="Página" name="pagina" id="pagina" onchange="apiFinalFantasy(this.value)">
+                    <!-- Este código crea un menú desplegable (elemento select) con opciones numeradas del 1 al 42. Cuando el usuario selecciona una opción, se activa una función de JavaScript llamada "apiFinalFantasy" con el valor seleccionado como parámetro. El propósito de esta función no está claro a partir del fragmento de código proporcionado. -->
+                    <script>
+                      const select = document.getElementById("pagina");
+                    //   bucle
+                      for (let i = 2; i <= 13; i++) {
+                        // Este código crea un nuevo elemento HTML option utilizando el método createElement() del objeto document en JavaScript. El elemento option se utiliza para definir una opción en un elemento select , que se utiliza típicamente en formularios HTML para permitir a los usuarios seleccionar una o varias opciones de una lista. Una vez que se crea el elemento option , se puede agregar a un elemento select utilizando el método appendChild() o modificarlo utilizando sus propiedades y métodos.
+                        const option = document.createElement("option");
+                        option.value = i;
+                        option.text = i;
+                        select.appendChild(option);
+                      }
+                    </script>
+                  </select>
                 </div>
                 <div class="col-md-4"></div>
             </div>
@@ -59,175 +66,9 @@ Fecha Creación: 14/05/2023 -->
 
     <div class="descripciones-personajes py-4">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" id="resultado">
 
-                <div class="card mx-2" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2 my-4" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2 my-4" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2 my-4" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
-
-                  <div class="card mx-2 my-4" style="width: 18rem;">
-                    <img src="${imagenes}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${character.name}</h5>
-                      <p class="card-text"></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
-                      <li class="list-group-item"><b>Job: </b>${character.job}</li>
-                      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
-                      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
-                      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
-                      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
-                      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
-                    </ul>
-                    <div class="card-body text-center">
-                      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
-                    </div>
-                  </div>
-                  <!-- fin card -->
+                <!-- Resultado reflejado en el card :D -->
 
             </div>
         </div>
@@ -257,3 +98,7 @@ Fecha Creación: 14/05/2023 -->
 </body>
 
 </html>
+
+
+
+

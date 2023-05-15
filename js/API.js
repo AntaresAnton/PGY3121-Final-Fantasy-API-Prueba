@@ -18,16 +18,28 @@ const apiFinalFantasy=async(pagina)=>{
         divItem=document.createElement('div')
         // El card
             divItem.innerHTML=`
-            <img width="200px" src="${imagenes}" alt="">
-                                <h5 class="card-title"><b>${character.name}</b></h5>
-                                <p class="card-title"><b>${character.japaneseName}</b></p>
-                                <p class="card-text"><b>Origen: </b>${character.origin}</p>
-                                <p class="card-text"><b>Especie:</b> ${character.species}</p>
-                                <p class="card-text"><b>edad:</b> ${character.age}</p>
-                                <p class="card-text"><b>genero:</b> ${character.gender}</p>
-                                <p class="card-text"><b>Especie:</b> ${character.race}</p>
-                                <p class="card-text"><b>Job:</b> ${character.job}</p>
-                                <p class="card-text"><b>descripción:</b> ${character.description}</p>
+            <div class="col-md-3 g-0">
+  <div class="card mx-2" style="width: 18rem;">
+    <img src="${imagenes}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${character.name}</h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+      <li class="list-group-item"><b>Job: </b>${character.job}</li>
+      <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+      <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+      <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+      <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+      <li class="list-group-item"><b>Raza: </b>${character.race}</li>                    
+    </ul>
+    <div class="card-body text-center">
+      <a class="btn btn-primary" href="#">Más información de ${character.name}</a>
+    </div>
+  </div>
+  <!-- fin card -->
+</div>
             `
             divRes.appendChild(divItem);
     });

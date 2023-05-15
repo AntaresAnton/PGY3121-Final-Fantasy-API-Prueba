@@ -7,4 +7,26 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+#resultado{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    /* display: block; */
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #resultado{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+       display: block;
+       margin: 0;
+    }
 }
