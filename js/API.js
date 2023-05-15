@@ -50,11 +50,18 @@ const apiFinalFantasy=async(pagina)=>{
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                        <img src="${imagenes}" class="card-img-top w-50" alt="...">
+                        <li class="list-group-item"><b>Nombre (JP): </b>${character.japaneseName}</li>
+                        <li class="list-group-item"><b>Job: </b>${character.job}</li>
+                        <li class="list-group-item"><b>Origen: </b>${character.origin}</li>
+                        <li class="list-group-item"><b>Especie: </b>${character.species}</li>
+                        <li class="list-group-item"><b>Edad: </b>${character.age}</li>
+                        <li class="list-group-item"><b>Género: </b>${character.gender}</li>
+                        <li class="list-group-item"><b>Raza: </b>${character.race}</li>   
                           <p>${character.description}</p>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                          
                         </div>
                       </div>
                     </div>
