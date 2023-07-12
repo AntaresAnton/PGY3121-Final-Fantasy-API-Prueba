@@ -22,7 +22,7 @@ const apiFinalFantasy=async(pagina)=>{
 <div class="col-md-3 col-sm-6 col-xs-12 g-0">
   <div class="card mx-2" style="width: 18rem;">
     <img src="${imagenes}" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body" id="${character.name}">
       <h5 class="card-title">${character.name}</h5>
       <p class="card-text"></p>
     </div>
